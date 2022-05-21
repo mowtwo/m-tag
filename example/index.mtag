@@ -1,0 +1,21 @@
+# 这是设想模型，后续会根据这个改进
+
+div(disabled=false).button#submitFormButton{
+  [
+    MTText("Ok")
+  ]
+}
+
+div({
+  disabled:false,
+  classNames:['button'],
+  id:'submitFormButton'
+},()=>NodeList({},()=>[
+  MTText({},()=>'Ok')
+]))
+
+div({
+  disabled:false,
+}).button['#submitFormButton'](()=>[
+  MTText.from("Ok")
+])
