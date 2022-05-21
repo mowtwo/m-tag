@@ -15,7 +15,7 @@ function astRender(ast) {
   }
 
   if (single.includes(ast?.el)) {
-    html += " />";
+    html += ">";
     return html;
   }
   html += ">";
