@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "16.11.1"
+  },
+  "dependencies": {
+    "pretty": "^2.0.0"
   }
 }

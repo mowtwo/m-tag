@@ -2,7 +2,7 @@
 
 div(disabled=false).button#submitFormButton{
   [
-    MTText("Ok")
+    "Ok"
   ]
 }
 

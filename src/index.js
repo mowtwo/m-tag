@@ -1,8 +1,9 @@
 const { div, span, br } = require("./element");
 const { transfer } = require("./transfer");
+const pretty = require("pretty");
 
 const el = div({ className: ["qt"] }).top(() => [
-  div['#myLine'].line.dot("dot-line"),
+  div["#myLine"].line.dot("dot-line"),
   div.list(() =>
     [1, 2, 3].map((num) =>
       span({ className: ["qt-list-item"] }, num.toString())
@@ -12,6 +13,10 @@ const el = div({ className: ["qt"] }).top(() => [
   br,
 ]);
 
-// const logJSON = (obj) => console.log(JSON.stringify(obj, null, " "));
+const html = transfer(el);
 
-console.log(transfer(el));
+console.log(
+  pretty(html, {
+    ocd: true,
+  })
+);
